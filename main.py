@@ -122,7 +122,10 @@ def get_birthday(birthday, year, today):
             print("请检查生日的日子是否在今年存在")
             os.system("pause")
             sys.exit(1)
-
+        birthday_month = birthday.month
+        birthday_day = birthday.day
+        # 今年生日
+        year_date = date(year, birthday_month, birthday_day)
     else:
         # 获取国历生日的今年对应月和日
         birthday_month = int(birthday.split("-")[1])
