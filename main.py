@@ -74,6 +74,8 @@ def get_weather(region):
     if response["code"] == "200":
         # 空气质量
         category = response["now"]["category"]
+        # pm2.5
+        pm2p5 = response["now"]["pm2p5"]
     else:
         # 国外城市获取不到数据
         category = ""
